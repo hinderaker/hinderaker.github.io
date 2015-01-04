@@ -3,9 +3,9 @@ permalink:              /:title
 relative_permalinks:    true
 
 # Setup
-title:                  'Data & IT Nett'
-tagline:                'Litt av alt'
-url:                    http://www.dataogit.no
+title:                  'gm.hinderaker.com'
+tagline:                'dev preview'
+url:                    http://gm.hinderaker.com
 paginate:               1
 paginate_path:          'side:num'
 baseurl:                ''
@@ -22,9 +22,9 @@ sass:
 # Custom vars
 version:                1.0.0
 github:
-  repo:                 https://github.com/dataogit/dataogit.github.com.git
+  repo:                 https://github.com/hinderaker/hinderaker.github.io.git
 
 # Pages
 pages_list:
-  Arkivet:                '/arkiv/'
+  Arkivet:              '/arkiv/'
   RSS:                  '/atom.xml'

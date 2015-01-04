@@ -2,8 +2,6 @@
 layout: default
 ---
 
-{% include addthis.prefs.html %}
-
 <article class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
@@ -24,12 +22,9 @@ layout: default
     {% when '12' %}Desember
   {% endcase %}
   {{ page.date | date: "%Y" }}
-  <span class="disqus-comment-count right" data-disqus-identifier="{{ page.title | slugify }}">0 kommentarer</span>
   </time>
   <p class="clear"></p>
   {{ content }}
-  <div class="addthis_sharing_toolbox right"></div>
-  <p class="clear"></p>
 </article>
 
 <aside class="related">
@@ -51,10 +46,4 @@ layout: default
       </li>
     {% endfor %}
   </ul>
-</aside>
-
-<aside class="related">
-  <h2>Kommentarer</h2>
-  <p>Har du spørsmål eller kommentarer kan du legge dem igjen her.</p>
-  {% include disqus.comments.html %}
 </aside>
