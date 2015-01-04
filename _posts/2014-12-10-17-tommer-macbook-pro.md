@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "2015 17\" MacBook Pro?!"
-tags: "macbookpro"
+tags: [github, github-pages, jekyll]
 published: true
 ---
 
