@@ -1,0 +1,56 @@
+---
+layout: default
+title: Home
+---
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <article class="post">
+    <h1 class="post-title">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">
+    {% assign m = post.date | date: "%-m" %}
+    {{ post.date | date: "%-d" }}.
+    {% case m %}
+      {% when '1' %}Januar
+      {% when '2' %}Februar
+      {% when '3' %}Mars
+      {% when '4' %}April
+      {% when '5' %}Mai
+      {% when '6' %}Juni
+      {% when '7' %}Juli
+      {% when '8' %}August
+      {% when '9' %}September
+      {% when '10' %}Oktober
+      {% when '11' %}November
+      {% when '12' %}Desember
+    {% endcase %}
+    {{ post.date | date: "%Y" }}
+    <span class="disqus-comment-count right" data-disqus-identifier="{{ post.title | slugify }}">0 kommentarer</span>
+    </time>
+    <p class="clear"></p>
+    {{ post.content }}
+   </article>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/">Neste</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/side{{paginator.previous_page}}">Neste</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Neste</span>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}/side{{paginator.next_page}}">Forrige</a>
+  {% else %}
+    <span class="pagination-item older">Forrige</span>
+  {% endif %}
+</div>
+    

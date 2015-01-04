@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+{% include addthis.prefs.html %}
+
+<article class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
+  {% assign m = page.date | date: "%-m" %}
+  {{ page.date | date: "%-d" }}.
+  {% case m %}
+    {% when '1' %}Januar
+    {% when '2' %}Februar
+    {% when '3' %}Mars
+    {% when '4' %}April
+    {% when '5' %}Mai
+    {% when '6' %}Juni
+    {% when '7' %}Juli
+    {% when '8' %}August
+    {% when '9' %}September
+    {% when '10' %}Oktober
+    {% when '11' %}November
+    {% when '12' %}Desember
+  {% endcase %}
+  {{ page.date | date: "%Y" }}
+  <span class="disqus-comment-count right" data-disqus-identifier="{{ page.title | slugify }}">0 kommentarer</span>
+  </time>
+  <p class="clear"></p>
+  {{ content }}
+  <div class="addthis_sharing_toolbox right"></div>
+  <p class="clear"></p>
+</article>
+
+<aside class="related">
+  <h2>Relaterte artikler</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+      <li>
+        <p class="left margin marginious gray">
+          <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%d.%m.%Y" }}
+          </time>
+        </p>
+        <p class="left marginious">  
+          <a href="{{ site.baseurl }}{{ post.url }}">
+           {{ post.title }}
+          </a>
+        </p>
+        <p class="clear"></p>
+      </li>
+    {% endfor %}
+  </ul>
+</aside>
+
+<aside class="related">
+  <h2>Kommentarer</h2>
+  <p>Har du spørsmål eller kommentarer kan du legge dem igjen her.</p>
+  {% include disqus.comments.html %}
+</aside>

@@ -1,0 +1,30 @@
+# Permalinks
+permalink:              /:title
+relative_permalinks:    true
+
+# Setup
+title:                  'Data & IT Nett'
+tagline:                'Litt av alt'
+url:                    http://www.dataogit.no
+paginate:               1
+paginate_path:          'side:num'
+baseurl:                ''
+author:
+  name:                 Glenn M. Hinderaker
+  url:                  https://twitter.com/gmhinderaker
+  email:                glenn@hinderaker.com
+
+# Assets
+sass:
+  sass_dir:             _scss
+  style:                :compressed
+
+# Custom vars
+version:                1.0.0
+github:
+  repo:                 https://github.com/dataogit/dataogit.github.com.git
+
+# Pages
+pages_list:
+  Arkivet:                '/arkiv/'
+  RSS:                  '/atom.xml'
