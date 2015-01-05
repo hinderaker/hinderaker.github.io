@@ -4,6 +4,8 @@ title: "2015 17\" MacBook Pro?!"
 category: blogg
 tags: [github, github-pages, jekyll]
 published: true
+
+redirect_from: /index.html
 ---
 
 Jeg, som  _alle_ andre, liker å ha stor og god skjerm på datamaskinen min. Det er absolutt en øvre grense, men den er ikke 15 tommer!
