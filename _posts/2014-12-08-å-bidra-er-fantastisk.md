@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Folding@Home, å bidra er fantastisk!
-tags: "folding@home"
 published: true
 ---
 
