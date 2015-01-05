@@ -34,7 +34,7 @@ layout: default
           {% endif %}
       {% endfor %}
       {% if category %}
-          {% capture category_content %}Kategori: <a href="/kategori/{{ category.slug }}/">{{ category.name }}</a>
+          {% capture category_content %}Kategori: <a href="/kategori/{{ category.slug }}/">{{ category.name }}</a><br>
           {% endcapture %}
       {% endif %}
   {% else %}
@@ -59,7 +59,7 @@ layout: default
       {% assign tags_content = '' %}
   {% endif %}
 
-  <p>{{ category_content }}<br>{{ tags_content }}</p>
+  {{ category_content }}{{ tags_content }}
 </article>
 
 <aside class="related">
