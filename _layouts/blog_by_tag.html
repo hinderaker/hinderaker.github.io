@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 
 {% if site.tags[page.tag] %}
@@ -18,7 +18,7 @@ layout: default
         {% endif %}
 		
         <span class="left gray margin">{{ post.date | date: "%d.%m.%Y" }}</span>
-        <span class="left">[{{ post.title }}]({{ post.url }})</span>
+        <span class="left"><a hef="{{ post.url }}">{{ post.title }}</a></span>
 
         <p class="clear"></p>
 
