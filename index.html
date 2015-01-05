@@ -4,8 +4,6 @@ redirect_to:
 	- !SISTE!
 ---
 
-{% for post in site.posts limit:1  %}
-{% if forloop.last %}
+{% assign post = site.posts.first %}
+
 {{ page.redirect_to | replace: '!SISTE!', post.url }}
-{% endif %}
-{% endfor %}
