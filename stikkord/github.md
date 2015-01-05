@@ -1,6 +1,6 @@
 ---
 layout: blog_by_tag
-title: 'Articles by tag: github'
+title: 'Artikler merket "github".'
 tag: github
 permalink: /github/
 ---

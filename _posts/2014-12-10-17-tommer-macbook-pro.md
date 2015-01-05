@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "2015 17\" MacBook Pro?!"
-category: programming
+category: blogg
 tags: [github, github-pages, jekyll]
 published: true
 ---
