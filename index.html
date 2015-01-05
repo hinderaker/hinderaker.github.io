@@ -2,13 +2,13 @@
 layout: default
 ---
 
-{% assign post = site.posts.first %}
+{% assign first_post = site.posts.first %}
 
 <article class="post">
-  <h1 class="post-title">{{ post.title }}</h1>
-  <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">
-  {% assign m = post.date | date: "%-m" %}
-  {{ post.date | date: "%-d" }}.
+  <h1 class="post-title">{{ first_post.title }}</h1>
+  <time datetime="{{ first_post.date | date_to_xmlschema }}" class="post-date">
+  {% assign m = first_post.date | date: "%-m" %}
+  {{ first_post.date | date: "%-d" }}.
   {% case m %}
     {% when '1' %}Januar
     {% when '2' %}Februar
@@ -23,13 +23,13 @@ layout: default
     {% when '11' %}November
     {% when '12' %}Desember
   {% endcase %}
-  {{ post.date | date: "%Y" }}
+  {{ first_post.date | date: "%Y" }}
   </time>
   <p class="clear"></p>
   {{ content }}
-  {% if post.category %}
+  {% if first_post.category %}
       {% for site_category in site.data.categories %}
-          {% if site_category.slug == post.category %}
+          {% if site_category.slug == first_post.category %}
               {% assign category = site_category %}
           {% endif %}
       {% endfor %}
@@ -41,10 +41,10 @@ layout: default
       {% assign category_content = '' %}
   {% endif %}
 
-  {% if post.tags.size > 0 %}
-      {% capture tags_content %} Stikkord:{% if post.tags.size == 1 %} 
+  {% if first_post.tags.size > 0 %}
+      {% capture tags_content %} Stikkord:{% if first_post.tags.size == 1 %} 
       {% endif %} {% endcapture %}
-      {% for post_tag in post.tags %}
+      {% for post_tag in first_post.tags %}
           {% for data_tag in site.data.tags %}
               {% if data_tag.slug == post_tag %}
                   {% assign tag = data_tag %}
