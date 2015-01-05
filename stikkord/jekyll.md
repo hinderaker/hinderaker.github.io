@@ -1,6 +1,6 @@
 ---
 layout: blog_by_tag
-title: 'Artikler merket "jekyll".'
+title: 'Artikler merket "{{ tag.name }}".'
 tag: jekyll
 permalink: /jekyll/
 ---
