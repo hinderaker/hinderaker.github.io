@@ -1,7 +1,5 @@
 - slug: blogg
   name: Blogg
-  color: '#3498db'
 
 - slug: programmering
   name: Programmering
-  color: '#1abc9c'

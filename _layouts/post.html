@@ -34,7 +34,7 @@ layout: default
           {% endif %}
       {% endfor %}
       {% if category %}
-          {% capture category_content %}Kategori: <span style="background-color:{{ category.color }}"><a href="/kategori/{{ category.slug }}/">{{ category.name }}</a></span> &nbsp; &nbsp; 
+          {% capture category_content %}Kategori: <a href="/kategori/{{ category.slug }}/">{{ category.name }}</a> &nbsp; &nbsp; 
           {% endcapture %}
       {% endif %}
   {% else %}
