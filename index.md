@@ -1,8 +1,0 @@
----
-layout: default
-redirect_to: '!SISTE!'
----
-
-{% assign post = site.posts.first %}
-
-{{ page.redirect_to | replace: '!SISTE!', post.url }}
