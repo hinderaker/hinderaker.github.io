@@ -1,4 +1,9 @@
 ---
 layout: default
-title: Home
+redirect_to:
+{% for post in site.posts limit:1  %}
+{% if forloop.last %}
+ 	- {{ post.url | prepend: site.baseurl }}
+{% endif %}
+{% endfor %}
 ---
