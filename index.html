@@ -4,8 +4,7 @@ title: Home
 ---
 
 <div class="posts">
-  {% assign post = site.posts.first %}
-  {% assign content = post.content %}
-  {% include post_detail.html %}
+{% for post in site.posts limit:1 %}
+{% endfor %}
 </div>
     
