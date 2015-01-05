@@ -1,13 +1,9 @@
+---
+layout: default
+---
+
 {% for post in site.posts limit: 1 %}
 
-<html>
-<head>
-</head>
-<body>
-<p>
 {{ site.url }}{{ post.url }}
-</p>
-</body>
-</html>
 
 {% endfor %}
