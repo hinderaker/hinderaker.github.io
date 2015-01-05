@@ -28,3 +28,6 @@ github:
 pages_list:
   Arkivet:              '/arkiv/'
   RSS:                  '/atom.xml'
+
+gems:
+  - jekyll-redirect-from
