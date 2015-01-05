@@ -1,8 +1,8 @@
 ---
 layout: default
-redirect_to: '!SITE_URL!'
+redirect_to: http://gm.hinderaker.com!POST_URL!
 ---
 
 {% assign post = site.posts.first %}
 
-{{ page.redirect_to | replace: '!SITE_URL!', post.url }}
+{{ page.redirect_to | replace: '!POST_URL!', post.url }}
