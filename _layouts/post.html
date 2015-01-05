@@ -34,7 +34,7 @@ layout: default
           {% endif %}
       {% endfor %}
       {% if category %}
-          {% capture category_content %}Kategori: <a href="/kategori/{{ category.slug }}/">{{ category.name }}</a> &nbsp; &nbsp; 
+          {% capture category_content %}Kategori: <a href="/kategori/{{ category.slug }}/">{{ category.name }}</a>
           {% endcapture %}
       {% endif %}
   {% else %}
@@ -42,8 +42,8 @@ layout: default
   {% endif %}
 
   {% if post.tags.size > 0 %}
-      {% capture tags_content %} Stikkord{% if post.tags.size == 1 %} 
-      {% endif %}: {% endcapture %}
+      {% capture tags_content %} Stikkord:{% if post.tags.size == 1 %} 
+      {% endif %} {% endcapture %}
       {% for post_tag in post.tags %}
           {% for data_tag in site.data.tags %}
               {% if data_tag.slug == post_tag %}
@@ -59,7 +59,7 @@ layout: default
       {% assign tags_content = '' %}
   {% endif %}
 
-  <p>{{ category_content }}{{ tags_content }}</p>
+  <p>{{ category_content }}<br>{{ tags_content }}</p>
 </article>
 
 <aside class="related">
